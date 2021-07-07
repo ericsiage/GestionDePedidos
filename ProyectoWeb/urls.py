@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('ProyectoWebApp.urls')),#enlazamos la urls de la app(ProyectoWebApp).
     path('servicios/', include('serviciosApp.urls')), #url servicios/ de serviciosApp.
+    path('blog/', include('blogApp.urls')), #url blog/ de blogApp.
 ]
 
