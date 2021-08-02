@@ -19,7 +19,7 @@ class Post(models.Model):
     contenido=models.CharField(max_length=30)
     imagen=models.ImageField(upload_to='blog', null=True, blank=True) #subir las imagenes en carpeta 'media/blog'
     autor=models.ForeignKey(User, on_delete=models.CASCADE)#relacion uno a muchos, un usuario puede hacer varios post pero un mismo post no puede ser de varios usuarios.on_delete=CASCADE, cuando el user se elimina, tambien se eliminan los post.
-    categorias=models.ManyToManyField(Categoria) #relacion muchos a muchos un post puede tener muchas categorias y las categorias pueden estar en muchos post. 
+    categoria=models.ManyToManyField(Categoria) #relacion muchos a muchos un post puede tener muchas categorias y las categorias pueden estar en muchos post. 
     created=models.DateTimeField(auto_now_add=True) #fecha de creacion del blog
     updated=models.DateTimeField(auto_now_add=True)
 
