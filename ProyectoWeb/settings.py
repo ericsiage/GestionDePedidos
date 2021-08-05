@@ -37,10 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #custom apps.
     'ProyectoWebApp',
     'serviciosApp',
     'blogApp',
     'contactoApp',
+    'tiendaApp',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +130,11 @@ MEDIA_URL='/media/' #especificamos URL publica
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media') #donde buscar archivos media 
 
 
+# Configuracion de email.
+
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com" #servidor email.
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_HOST_USER=""
+EMAIL_HOST_PASSWORD=''
