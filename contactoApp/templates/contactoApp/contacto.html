@@ -7,6 +7,8 @@
 
     {% if "valido" in request.GET %}
         <p style="color: rgb(216, 216, 216);">Informacion enviada correctamente.</p>
+    {% elif "novalido" in request.GET %}
+        <p style="color: rgb(216, 216, 216);">Error interno.</p>
     {% endif %}
     <form action="" method="POST" style="text-align: center;">
         {% csrf_token %}
