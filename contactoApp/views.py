@@ -12,7 +12,7 @@ def contacto(request):
     formulario_contacto=formularioContacto
     
     if request.method=="POST":
-        formulario_contacto=formularioContacto(data=request.POST)
+        formulario_contacto=formularioContacto(data=request.POST) #guardamos en la variable la data del request.POST de la clase formularioContacto.
         if formulario_contacto.is_valid():
             nombre=request.POST.get("nombre")
             email=request.POST.get("email")
